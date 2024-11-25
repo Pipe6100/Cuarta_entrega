@@ -1,0 +1,37 @@
+.header-appbar {
+   background: linear-gradient(135deg, #0288D1, #FF6D00);
+   padding: 20px 40px;
+   color: white;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   border-bottom-left-radius: 25px;
+   border-bottom-right-radius: 25px;
+   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+}
+
+.header-title {
+   font-size: 2.5rem;
+   font-weight: bold;
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.header-button {
+   font-weight: bold;
+   color: white;
+   padding: 15px 30px;
+   margin-left: 20px;
+   background-color: rgba(255, 255, 255, 0.25);
+   border-radius: 25px;
+   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+   transition: all 0.3s ease;
+   display: inline-flex;
+   align-items: center;
+   gap: 10px;
+   font-size: 1.1rem;
+}
+
+.header-button:hover {
+   background-color: rgba(255, 255, 255, 0.5);
+   transform: scale(1.1);
+}

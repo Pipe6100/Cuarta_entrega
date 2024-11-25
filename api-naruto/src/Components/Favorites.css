@@ -1,0 +1,134 @@
+.favorites-container {
+    padding: 60px;
+    background: radial-gradient(circle at center, #FFF8E1, #FFECB3);
+    border-radius: 25px;
+    max-width: 1000px;
+    margin: auto;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+    border-top: 12px solid #0288D1;
+    border-bottom: 12px solid #FF6D00;
+}
+
+.favorites-title {
+    font-weight: bold;
+    text-align: center;
+    font-size: 3.2rem;
+    padding-bottom: 15px;
+    margin-bottom: 50px;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(135deg, #0288D1, #FF6D00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    animation: pulse 1.5s infinite;
+}
+
+.favorites-title::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: #FF6D00;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.05);
+        opacity: 0.8;
+    }
+}
+
+.favorite-card {
+    background: #FFFFFF;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+    border: 2px solid transparent;
+    overflow: hidden;
+    position: relative;
+    transform: scale(1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.favorite-card:hover {
+    border-image: linear-gradient(45deg, #FF6D00, #0288D1);
+    border-image-slice: 1;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+    transform: translateY(-8px) scale(1.05);
+}
+
+.favorite-card::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 25px;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), transparent);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.favorite-card:hover::before {
+    opacity: 1;
+}
+
+.favorite-title {
+    color: #BF360C;
+    font-weight: bold;
+    font-size: 1.6rem;
+    font-family: 'Playfair Display', serif;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: color 0.3s ease;
+    margin-bottom: 8px;
+}
+
+.favorite-card:hover .favorite-title {
+    color: #FF5722;
+}
+
+.favorite-card .MuiTypography-body2 {
+    color: #757575;
+    font-size: 1rem;
+    font-style: italic;
+    text-align: center;
+    background: rgba(255, 227, 138, 0.8);
+    padding: 8px 12px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    width: fit-content;
+    margin-top: 12px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.favorite-card::after {
+    content: '⭐';
+    font-size: 1.5rem;
+    color: #FF6D00;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    opacity: 0.8;
+}
+
+.no-favorites-text {
+    color: #757575;
+    text-align: center;
+    font-style: italic;
+    font-size: 1.3rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
